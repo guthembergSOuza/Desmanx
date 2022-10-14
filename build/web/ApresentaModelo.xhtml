@@ -14,9 +14,9 @@
         <h:form id="formApresentaModelo">
 
             <p:dataTable id="tblModelo" var="item" 
-                         value="#{tvController.readAllModelo()}"
+                         value="#{modeloController.readAllModelos()}"
                          paginator="true" rows="4" selectionMode="single"
-                         selection="#{tvController.selModelo}"
+                         selection="#{modeloController.selModelo}"
                          rowKey="#{item.codigo}">
 
                 <p:column headerText="código">
@@ -42,7 +42,7 @@
 
             <p:commandButton value="alterar" action='AlteraModelo'/>
 
-            <p:commandButton value="deletar" action="#{tvController.deletar()}"
+            <p:commandButton value="deletar" action="#{modeloController.deletar()}"
                              update=":formApresentaModelo :gro">
                 <p:confirm message="Deseja relamente deletar este Modelo?"/>
             </p:commandButton>
@@ -57,19 +57,19 @@
             <p:panelGrid columns="2">
 
                 <h:outputText value="código"/>
-                <h:outputText value="#{tvController.selTipoVitima.codigo}"/>
+                <h:outputText value="#{modeloController.selModelo.codigo}"/>
 
                 <h:outputText value="Tipo"/>
-                <h:outputText value="#{tvController.selTipoVitima.tipo}"/>
+                <h:outputText value="#{modeloController.selModelo.tipo}"/>
 
                 <h:outputText value="Dificuldade"/>
-                <h:outputText value="#{tvController.selTipoVitima.dificuldade}"/>
+                <h:outputText value="#{modeloController.selModelo.dificuldade}"/>
 
                 <h:outputText value="Profissão"/>
-                <h:outputText value="#{tvController.selTipoVitima.profissao}"/>
+                <h:outputText value="#{modeloController.selModelo.profissao}"/>
 
                 <h:outputText value="Observação"/>
-                <h:outputText value="#{tvController.selTipoVitima.observacao}"
+                <h:outputText value="#{modeloController.selModelo.observacao}"
                               escape="xml"/>
 
 

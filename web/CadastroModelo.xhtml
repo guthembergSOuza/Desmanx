@@ -15,25 +15,25 @@
                 <p:panelGrid columns="3">
                     
                     <h:outputText value="Nome"/>
-                    <p:inputText id="txtNome" value="#{tvController.modelo.nome}"
+                    <p:inputText id="txtNome" value="#{modeloController.modelo.nome}"
                                  required="true" requiredMessage="Nome de modelo obrigatório!"/>
                     <p:message for="txtNome"/>
                     
                     <h:outputText value="Fabricante"/>
-                    <h:inputText value="#{tvController.modelo.fabricante}"/>
+                    <h:inputText value="#{modeloController.modelo.fabricante}"/>
                     <h:outputText/>
                     
                     <h:outputText value="Tipo"/>
-                    <p:inputText id="txtTipo" value="#{tvController.modelo.tipo}"
+                    <p:inputText id="txtTipo" value="#{modeloController.modelo.tipo}"
                                  required="true" requiredMessage="Tipo Obrigatório!"/>
                     <p:message for="txtTipo"/>
                     
                     <h:outputText value="Potencia Motor"/>
-                    <h:inputText value="#{tvController.modelo.potenciaMotor}"/>
+                    <h:inputText value="#{modeloController.modelo.potenciaMotor}"/>
                     <h:outputText/>
                     
                     <h:outputText value="Cilindrada Motor"/>
-                    <h:inputText value="#{tvController.modelo.cilindradaMotor}"/>
+                    <h:inputText value="#{modeloController.modelo.cilindradaMotor}"/>
                     <h:outputText/>
                 </p:panelGrid>
                 
@@ -46,9 +46,9 @@
             <p:dialog id="confCadModelo" modal="true"
                       widgetVar="widConfModelo">
                 <h:outputText value="Deseja realmente cadastrar esse Modelo?"/><br/>
-                <p:commandButton value="sim" action="#{tvController.inserir()}" 
-                                 oncomplete="PF('widConfTipoVitima').hide()" update=':formCadModelo'/>
-                <p:commandButton value="não" oncomplete="PF('widConfTipoVitima').hide()"/>
+                <p:commandButton value="sim" action="#{modeloController.inserir()}" 
+                                 oncomplete="PF('widConfModelo').hide()" update=':formCadModelo'/>
+                <p:commandButton value="não" oncomplete="PF('widConfModelo').hide()"/>
             </p:dialog>
             
         </h:form>
