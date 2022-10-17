@@ -14,7 +14,7 @@
         <h:form id="formApresentaModelo">
 
             <p:dataTable id="tblModelo" var="item" 
-                         value="#{modeloController.readAllModelos()}"
+                         value="#{modeloController.readAllModelo()}"
                          paginator="true" rows="4" selectionMode="single"
                          selection="#{modeloController.selModelo}"
                          rowKey="#{item.codigo}">

@@ -35,15 +35,15 @@ public class ModeloController {
         FacesContext.getCurrentInstance().addMessage(null,
                 new FacesMessage("Modelo cadastrado com sucesso!"));
         
-        return "listaModelos";
+        return "ApresentaModelo";
     }
     
-    public List<Modelo> readAllModelos(){
+    public List<Modelo> readAllModelo(){
         
-        List<Modelo> modelos = ManagerDao.getCurrentInstance()
-                .read("select mdl from Modelo mdl", 
+        List<Modelo> tipos = ManagerDao.getCurrentInstance()
+                .read("select tv from Modelo tv", 
                         Modelo.class);
-        return modelos;
+        return tipos;
     }
     
     public String alterar(){
@@ -51,9 +51,9 @@ public class ModeloController {
         ManagerDao.getCurrentInstance().update(this.selModelo);
         
         FacesContext.getCurrentInstance().addMessage(null,
-                new FacesMessage("Modelo alterado com sucesso!"));
+                new FacesMessage("Modelo, alterado com sucesso!"));
         
-        return "ModeloList";
+        return "ApresentaModelo";
         
     }
     
@@ -78,6 +78,5 @@ public class ModeloController {
 
     public void setSelModelo(Modelo selModelo) {
         this.selModelo = selModelo;
-    }
-
+    }   
 }
